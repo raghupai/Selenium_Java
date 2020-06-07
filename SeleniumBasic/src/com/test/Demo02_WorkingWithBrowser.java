@@ -5,12 +5,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.WebDriverEventListener;
 
 public class Demo02_WorkingWithBrowser {
 
 	WebDriver driver;
 	String url = "https://phptravels.com/demo/";
 	String driverPath = "/Users/raghuveer/Desktop/SeleniumDrivers/";
+	WebDriverEventListener eventListener;
 
 	@Before
 	public void setUp() {
@@ -22,6 +24,7 @@ public class Demo02_WorkingWithBrowser {
 
 		// Open the AUT
 		driver.get(url);
+
 	}
 
 	@Test
