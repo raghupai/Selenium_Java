@@ -4,18 +4,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class PG12 {
+public class PG05 {
 
 	public static void main(String[] args) {
-		String baseUrl = "http://demo.guru99.com/test/link.html";
 		String driverPath = "/Users/raghuveer/Desktop/SeleniumDrivers/";
 		System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver");
 		WebDriver driver = new FirefoxDriver();
+		String alertMessage = "";
 
-		driver.get(baseUrl);
-		driver.findElement(By.linkText("click here")).click();
-		System.out.println("title of page is: " + driver.getTitle());
+		driver.get("http://jsbin.com/usidix/1");
+		driver.findElement(By.cssSelector("input[value=\"Go!\"]")).click();
+		alertMessage = driver.switchTo().alert().getText();
+		driver.switchTo().alert().accept();
+
+		System.out.println(alertMessage);
 		driver.quit();
-	}
 
+	}
 }

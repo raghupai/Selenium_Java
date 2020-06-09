@@ -7,15 +7,25 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class PG10 {
 
 	public static void main(String[] args) {
-		String baseUrl = "http://demo.guru99.com/test/link.html";
+		String baseUrl = "https://www.facebook.com/login/identify?ctx=recover";
 		String driverPath = "/Users/raghuveer/Desktop/SeleniumDrivers/";
 		System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver");
 		WebDriver driver = new FirefoxDriver();
 
 		driver.get(baseUrl);
-		driver.findElement(By.linkText("click here")).click();
-		System.out.println("title of page is: " + driver.getTitle());
-		driver.quit();
-	}
+		// click on the "Facebook" logo on the upper left portion
+		driver.findElement(By.cssSelector("a[title=\"Go to Facebook home\"]")).click();
 
+		String title = driver.getTitle();
+		System.out.println(title);
+
+		// verify that we are now back on Facebook's homepage
+		if (driver.getTitle().equals("Facebook – log in or sign up")) {
+			System.out.println("We are back at Facebook's homepage");
+		} else {
+			System.out.println("We are NOT in Facebook's homepage");
+		}
+		driver.close();
+
+	}
 }

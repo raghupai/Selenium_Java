@@ -4,17 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class PG12 {
-
+public class PG24 {
 	public static void main(String[] args) {
-		String baseUrl = "http://demo.guru99.com/test/link.html";
+		String baseUrl = "http://demo.guru99.com/test/newtours/";
 		String driverPath = "/Users/raghuveer/Desktop/SeleniumDrivers/";
 		System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver");
 		WebDriver driver = new FirefoxDriver();
 
 		driver.get(baseUrl);
-		driver.findElement(By.linkText("click here")).click();
-		System.out.println("title of page is: " + driver.getTitle());
+		String innerText = driver.findElement(By.xpath("//table[@width=\"270\"]/tbody/tr[3]/td")).getText();
+		System.out.println(innerText);
 		driver.quit();
 	}
 

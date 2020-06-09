@@ -5,12 +5,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 //comment the above line and uncomment below line to use Chrome
 //import org.openqa.selenium.chrome.ChromeDriver;
-public class PG1 {
+public class PG01 {
 
 	public static void main(String[] args) {
 		// declaration and instantiation of objects/variables
 		String driverPath = "/Users/raghuveer/Desktop/SeleniumDrivers/";
 		System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver");
+		
 		WebDriver driver = new FirefoxDriver();
 		// comment the above 2 lines and uncomment below 2 lines to use Chrome
 		// System.setProperty("webdriver.chrome.driver","G:\\chromedriver.exe");

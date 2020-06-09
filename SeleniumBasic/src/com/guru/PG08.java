@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class PG6 {
+public class PG08 {
 	public static void main(String[] args) {
 
 		// declaration and instantiation of objects/variables

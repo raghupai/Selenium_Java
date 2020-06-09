@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class PG7 {
+public class PG09 {
 	public static void main(String[] args) {
 
 		// declaration and instantiation of objects/variables
@@ -46,7 +46,8 @@ public class PG7 {
 			chkFBPersist.click();
 			System.out.println("Facebook Persists Checkbox Status is -  " + chkFBPersist.isSelected());
 		}
-		// driver.close();
+
+		driver.quit();
 
 	}
 }

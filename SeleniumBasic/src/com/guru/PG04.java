@@ -4,21 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class PG5 {
-
+public class PG04 {
 	public static void main(String[] args) {
 		String driverPath = "/Users/raghuveer/Desktop/SeleniumDrivers/";
 		System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver");
 		WebDriver driver = new FirefoxDriver();
-		String alertMessage = "";
 
-		driver.get("http://jsbin.com/usidix/1");
-		driver.findElement(By.cssSelector("input[value=\"Go!\"]")).click();
-		alertMessage = driver.switchTo().alert().getText();
-		driver.switchTo().alert().accept();
-
-		System.out.println(alertMessage);
-		driver.quit();
-
+		driver.get("http://demo.guru99.com/selenium/deprecated.html");
+		driver.switchTo().frame("classFrame");
+		driver.findElement(By.linkText("Deprecated")).click();
+		driver.close();
 	}
 }
