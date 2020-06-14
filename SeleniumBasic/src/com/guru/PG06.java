@@ -21,6 +21,8 @@ public class PG06 {
 		// Click on Check Button
 		driver.findElement(By.id("buttoncheck")).click();
 
+		driver.quit();
+
 	}
 
 }

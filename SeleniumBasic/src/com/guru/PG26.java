@@ -17,6 +17,7 @@ public class PG26 {
 
 		wd.get("http://demo.guru99.com/test/web-table-element.php");
 		// No.of Columns
+		//// *[@id="leftcontainer"]/table
 		List<WebElement> col = wd.findElements(By.xpath(".//*[@id=\"leftcontainer\"]/table/thead/tr/th"));
 		System.out.println("No of cols are : " + col.size());
 		// No.of rows

@@ -28,16 +28,14 @@ public class PG21 {
 
 		System.out.println(s1.size());
 
-		while (i1.hasNext()) {
-			String ChildWindow = i1.next();
+		for (String windows : s1) {
+			driver.switchTo().window(windows);
 
-			System.out.println(ChildWindow);
-
-			if (!MainWindow.equalsIgnoreCase(ChildWindow)) {
+			if (!MainWindow.equalsIgnoreCase(driver.getWindowHandle())) {
 
 				// Switching to Child window
 				System.out.println("Inside Child Window");
-				driver.switchTo().window(ChildWindow).navigate();
+				driver.switchTo().window(windows);
 				System.out.println(driver.getCurrentUrl());
 				System.out.println(driver.getTitle());
 				driver.findElement(By.name("emailid")).sendKeys("gaurav.3n@gmail.com");

@@ -30,7 +30,7 @@ public class PG20 {
 		Thread.sleep(5000);
 
 		// Accepting alert
-		alert.accept();
+		alert.dismiss();
 
 		driver.quit();
 	}

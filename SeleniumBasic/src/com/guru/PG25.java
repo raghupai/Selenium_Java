@@ -12,6 +12,11 @@ public class PG25 {
 		WebDriver driver = new FirefoxDriver();
 
 		driver.get(baseUrl);
+		//// table/tbody/tr/td[2]
+		/// table/tbody/tr[4]/td
+		/// table/tbody/tr/td[2]
+		/// table/tbody/tr[2]/td[1]
+		/// table[2]/tbody/tr[3]/td[2]/font
 		String innerText = driver.findElement(By.xpath("//table/tbody/tr/td[2]" + "//table/tbody/tr[4]/td/"
 				+ "table/tbody/tr/td[2]/" + "table/tbody/tr[2]/td[1]/" + "table[2]/tbody/tr[3]/td[2]/font")).getText();
 		System.out.println(innerText);

@@ -14,6 +14,7 @@ public class PG13 {
 		driver.get(baseUrl);
 		driver.findElement(By.partialLinkText("here")).click();
 		System.out.println("Title of page is: " + driver.getTitle());
+
 		driver.quit();
 	}
 
