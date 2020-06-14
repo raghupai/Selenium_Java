@@ -12,14 +12,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Demo07_InteractionwithWebTables {
-	WebDriver driver;
+	WebDriver driver = null;
 	String url = "https://phptravels.com/demo/";
 	String driverPath = "/Users/raghuveer/Desktop/SeleniumDrivers/";
 
 	@Before
 	public void setUp() {
 		// Set the key/value property according to the browser you are using.
-		System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver");
 
 		// Open browser instance
 		driver = new FirefoxDriver();

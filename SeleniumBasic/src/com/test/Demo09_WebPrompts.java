@@ -94,7 +94,7 @@ public class Demo09_WebPrompts {
 		driver.findElement(By.id("confirmBooking")).click();
 
 		// Accept the alert box
-		driver.switchTo().alert().accept();
+		driver.switchTo().alert().getText();
 
 		Thread.sleep(2000);
 
